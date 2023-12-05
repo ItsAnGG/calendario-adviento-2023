@@ -34,8 +34,6 @@ window.addEventListener("DOMContentLoaded", function() {
     deleteAllBtn.addEventListener("click", function(){
         const arrayDeseos = Array.from(listaDeseos.children)
 
-        arrayDeseos.forEach(function(deseo){
-            deseo.remove();
-        })
+        arrayDeseos.forEach((deseo)=> deseo.remove());
     })
 })
