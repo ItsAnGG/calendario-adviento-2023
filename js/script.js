@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", function() {
     const inputDeseo = document.querySelector(".deseoInput");
     const submitBtn = document.querySelector(".submit-btn");
     const listaDeseos = document.getElementById("listaDeseos");
+    const deleteAllBtn = document.getElementById("delete-all-btn");
 
     submitBtn.addEventListener("click", function(){
         const nuevoDeseo = inputDeseo.value.trim();
@@ -28,5 +29,13 @@ window.addEventListener("DOMContentLoaded", function() {
                 }
             })
         }
+    })
+
+    deleteAllBtn.addEventListener("click", function(){
+        const arrayDeseos = Array.from(listaDeseos.children)
+
+        arrayDeseos.forEach(function(deseo){
+            deseo.remove();
+        })
     })
 })
